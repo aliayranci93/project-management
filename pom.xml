@@ -28,6 +28,7 @@
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
 
+
 		<!-- https://mvnrepository.com/artifact/org.modelmapper/modelmapper -->
 		<dependency>
 			<groupId>org.modelmapper</groupId>
@@ -44,17 +45,17 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!--<dependency>-->
-			<!--<groupId>org.postgresql</groupId>-->
-			<!--<artifactId>postgresql</artifactId>-->
-			<!--<scope>runtime</scope>-->
-		<!--</dependency>-->
-		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<version>1.4.197</version>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
 		</dependency>
+
+		<!--<dependency>-->
+			<!--<groupId>com.h2database</groupId>-->
+			<!--<artifactId>h2</artifactId>-->
+			<!--<version>1.4.197</version>-->
+		<!--</dependency>-->
 
 
 		<dependency>

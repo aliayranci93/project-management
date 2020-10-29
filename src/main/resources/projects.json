@@ -1,0 +1,44 @@
+[
+  {
+    "_class": "com.alia.projectmanagement.entity.Project",
+    "projectCode" : "TT1",
+    "projectName": "TT1"
+  },
+  {
+    "_class": "com.alia.projectmanagement.entity.Project",
+    "projectCode" : "TT2",
+    "projectName": "TT2"
+  },
+  {
+    "_class": "com.alia.projectmanagement.entity.Project",
+    "projectCode" : "TT3",
+    "projectName": "CRM Project for Sales"
+  },
+  {
+    "_class": "com.alia.projectmanagement.entity.Project",
+    "projectCode" : "TT4",
+    "projectName": "TT4"
+  },
+  {
+    "_class": "com.alia.projectmanagement.entity.Project",
+    "projectCode" : "TT5",
+    "projectName": "TT5"
+  },
+  {
+    "_class": "com.alia.projectmanagement.entity.Project",
+    "projectCode" : "TT6",
+    "projectName": "TT6"
+  },
+  {
+    "_class": "com.alia.projectmanagement.entity.User",
+    "username" : "alia",
+    "nameSurname": "Ali AYRANCI",
+    "email":"aliayranci93@gmail.com"
+  },
+  {
+    "_class": "com.alia.projectmanagement.entity.User",
+    "username" : "jdoe",
+    "nameSurname": "John Doe",
+    "email":"jdoe@gmail.com"
+  }
+]

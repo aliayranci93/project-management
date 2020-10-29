@@ -8,8 +8,9 @@ import lombok.Setter;
 import javax.persistence.*;
 
 
-@Entity
+
 @Table(name = "project")
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
