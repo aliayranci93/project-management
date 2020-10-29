@@ -2,7 +2,7 @@ Merhaba,
 
 1- Lütfen application.properties içerisindeki postgresql datasource ayarlarını yapınız. (Bendeki databse : projectmanagement)
 2-ProjectManagerApplication Main Class'taki test kayıtlarını oluşturacak olan repositoryPopulator methodunu aktifleştirin. 
-Ve projeyi 1 defa ayağa kaldırın ardından ilgili methodu kapatabilirsiniz. 
+Ve projeyi 1 defa ayağa kaldırın ardından ilgili methodu yorum satırına alabilirsiniz. 
 
 
 
@@ -28,7 +28,7 @@ Gerekli json body formatı :
       "managerId":"7"
 }
 
-Silme işlemi için yapılan istek (DELETE):
+Silme işlemi için :
 YAPILMASI GEREKEN İSTEK : (DELETE)
 DİNLENEN APİ PATH: http://localhost:8000/api/projects/1  
 
