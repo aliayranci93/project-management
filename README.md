@@ -28,7 +28,7 @@ Gerekli json body formatı :
       "managerId":"7"
 }
 
-Silme işlemi için yapılan istek (DELETE):
+Silme işlemi için :
 YAPILMASI GEREKEN İSTEK : (DELETE)
 DİNLENEN APİ PATH: http://localhost:8000/api/projects/1  
 
