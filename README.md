@@ -8,37 +8,10 @@ Ve projeyi 1 defa ayağa kaldırın ardından ilgili methodu yorum satırına al
 
 
 
-REST APİ TEST İÇİN;
+REST APİ TEST İÇİN; (Swagger Aktiftir)
 
-Tüm veriyi pageable şekilde listelemek için (GET):
-APİ PATH : http://localhost:8000/api/projects/pagination
+Proje Ayağa kalktıktan sonra 
 
+localhost:8000/swagger-ui.html 
 
-Databasedeki tekil proje verisini çekmek için  ; 
-YAPILMASI GEREKEN İSTEK : (GET)
-DİNLENEN APİ PATH: http://localhost:8000/api/projects/1
-
-Proje Verisi eklemek için;
-YAPILMASI GEREKEN İSTEK : (POST)
-DİNLENEN APİ PATH: http://localhost:8000/api/projects
-Gerekli json body formatı : 
-{
-    "projectName":"deneme",
-    "projectCode":"deneme13",
-      "managerId":"7"
-}
-
-Silme işlemi için :
-YAPILMASI GEREKEN İSTEK : (DELETE)
-DİNLENEN APİ PATH: http://localhost:8000/api/projects/1  
-
-
-Güncelleme işlemi için :
-YAPILMASI GEREKEN İSTEK : (PUT)
-DİNLENEN APİ PATH: http://localhost:8000/api/projects/2
-
-Gerekli Json Format:
-{
-    "projectName":"deneme",
-    "projectCode":"deneme132"
-}
+Adresine giderek tüm web servislerin testlerinin nasıl yapılacağını inceleyebilirsiniz.

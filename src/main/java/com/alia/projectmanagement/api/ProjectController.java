@@ -10,6 +10,7 @@ import com.alia.projectmanagement.util.ApiPaths;
 import com.alia.projectmanagement.util.TPage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping(ApiPaths.ProjectCtrl.CTRL)
 @Api(description = "Proje Api'leri",value = ApiPaths.ProjectCtrl.CTRL)
+@Slf4j
 public class ProjectController {
 
     private final ProjectService projectService;
@@ -38,6 +40,8 @@ public class ProjectController {
     @GetMapping("/{id}")
     @ApiOperation(value = "Proje git Id'ye göre",response = ProjectDto.class)
     public ResponseEntity<ProjectDto> getById(@PathVariable(value = "id", required = true) Long id) {
+        log.info("ProjectController - getById Çağırıldı. ");
+        log.debug("ProjectController - getById Çağırıldı. Id Parametresi :" +id);
         ProjectDto projectDto = projectService.getById(id);
         return ResponseEntity.ok(projectDto);
     }
