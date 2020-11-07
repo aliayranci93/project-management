@@ -5,4 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface IssueRepository extends JpaRepository<Issue,Long> {
 
+    Issue getByIdAndIdNot(Object projectCode, Long id);
+
 }

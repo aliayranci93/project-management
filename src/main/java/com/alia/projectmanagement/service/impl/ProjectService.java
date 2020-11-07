@@ -86,11 +86,11 @@ public class ProjectService implements IProjectService {
     public ProjectDto update(Long id, ProjectDto project) {
         Project projectDb = projectRepository.getOne(id);
         if (projectDb == null)
-            throw new IllegalArgumentException("Project Does Not Exist ID:" + id);
+            throw new IllegalArgumentException("Proje Bulunamadı ID'si:" + id);
 
         Project projectCheck = projectRepository.getByProjectCodeAndIdNot(project.getProjectCode(), id);
         if (projectCheck != null)
-            throw new IllegalArgumentException("Project Code Already Exist");
+            throw new IllegalArgumentException("Proje Kodu Zaten Bulunmakta");
 
         projectDb.setProjectCode(project.getProjectCode());
         projectDb.setProjectName(project.getProjectName());

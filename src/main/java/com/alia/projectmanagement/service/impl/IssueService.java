@@ -43,14 +43,13 @@ public class IssueService implements IIssueService {
 
     @Override
     public IssueDto save(IssueDto issue) {
-        // Bussiness Logic
+
         issue.setDate(new Date());
         issue.setIssueStatus(IssueStatus.OPEN);
 
-
         Issue issueEntity = modelMapper.map(issue, Issue.class);
 
-        issueEntity.setProject(projectRepository.getOne(issue.getProjectId()));
+//        issueEntity.setProject(projectRepository.getOne(issue.getProjectId()));
         issueEntity = issueRepository.save(issueEntity);
 
         issue.setId(issueEntity.getId());
@@ -107,7 +106,20 @@ public class IssueService implements IIssueService {
     }
 
     @Override
-    public IssueDto update(Long id, IssueDto project) {
-        return null;
+    public IssueDto update(Long id, IssueDto issue) {
+        Issue issueDb = issueRepository.getOne(id);
+        if (issueDb == null)
+            throw new IllegalArgumentException("Issue Bulunamadı ID'si:" + id);
+
+        Issue projectCheck = issueRepository.getByIdAndIdNot(id, id);
+        if (projectCheck != null)
+            throw new IllegalArgumentException("Issue  Zaten Bulunmakta");
+
+        issueDb.setDescription(issue.getDescription());
+        issueDb.setDate(issue.getDate());
+
+
+        issueRepository.save(issueDb);
+        return modelMapper.map(issueDb, IssueDto.class);
     }
 }

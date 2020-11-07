@@ -1,5 +1,6 @@
 package com.alia.projectmanagement;
 
+import io.swagger.annotations.Api;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.boot.SpringApplication;
@@ -9,9 +10,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.data.repository.init.Jackson2RepositoryPopulatorFactoryBean;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
+@EnableSwagger2
+
 public class ProjectManagementApplication {
 
     public static void main(String[] args) {
@@ -26,7 +30,7 @@ public class ProjectManagementApplication {
     }
 
 
-    //TODO  TEST VERİSİNE İHTİYAÇ DUYULDUĞUNDA AÇABİLİRSİNİZ.
+//    //TODO  TEST VERİSİNE İHTİYAÇ DUYULDUĞUNDA AÇABİLİRSİNİZ.
 //	@Bean
 //    public Jackson2RepositoryPopulatorFactoryBean repositoryPopulator() {
 //        Jackson2RepositoryPopulatorFactoryBean factory = new Jackson2RepositoryPopulatorFactoryBean();
