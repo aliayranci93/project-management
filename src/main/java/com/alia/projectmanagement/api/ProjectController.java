@@ -22,6 +22,7 @@ import java.util.List;
 @RequestMapping(ApiPaths.ProjectCtrl.CTRL)
 @Api(description = "Proje Api'leri",value = ApiPaths.ProjectCtrl.CTRL)
 @Slf4j
+@CrossOrigin
 public class ProjectController {
 
     private final ProjectService projectService;
